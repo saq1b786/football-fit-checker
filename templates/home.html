@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Fit checker </title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+
+  <main class="container">
+
+  <div class="hero-section">
+
+    <img src="{{ url_for('static', filename='images/hero-image.png') }}" alt="football pitch" class="hero-image">
+
+  <div class="header-title">
+
+    <h1>Football Fit Checker</h1>
+    <p>Check if a player FITS into your club.</p>
+
+  </div>
+  </div>
+
+
+  <section class="form-selection">
+
+    <form action="" class="form-selector" method="POST">
+
+      <select name="player" id="player_dropdown" required>
+
+        <option value="" disabled selected>Select Player</option>
+        <option value="messi">messi</option>
+        <option value="ronaldo">ronaldo</option>
+        <option value="salah">salah</option>
+
+      </select>
+
+      <select name="team" id="team_dropdown" required>
+
+        <option value="" disabled selected>Select Team</option>
+        <option value="liverpool">liverpool</option>
+        <option value="man united">man united</option>
+        <option value="arsenal">arsenal</option>
+
+      </select>
+
+      <button type="submit" class="submit-btn">Check Fit!</button>
+
+    </form>
+
+    <section class="results">
+  <!-- Fit analysis will appear here -->
+    </section>
+
+    </section>
+
+
+
+
+  </main>
+  
+</body>
+</html>
