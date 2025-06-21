@@ -4,8 +4,8 @@ import os
 
 filename = "data/player_transfers.csv"
 
-if not os.path.exists(filename):
-  with open(filename, mode='w', newline='', encoding='utf-8') as file:
+
+with open(filename, mode='w', newline='', encoding='utf-8') as file:
     writer=csv.writer(file)
     writer.writerow([
        # --- Core Transfer Info ---
@@ -54,5 +54,3 @@ if not os.path.exists(filename):
     "overall_success_rating"   # 1-5 scale (human-adjusted)
     ])
     print(f"✅ Created CSV with headers at {filename}")
-else:
-    print(f"📁 CSV already exists at {filename}")
